@@ -86,10 +86,6 @@ func SetMock(mval bool) {
 	mock = &mval
 }
 
-func GetExtendedopt() *string {
-	return extendedopt
-}
-
 func GetUsr1() *string {
 	return usr1
 }
