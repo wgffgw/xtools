@@ -42,10 +42,10 @@ host=localhost:9999  //mqproxy的ip:port地址
 #### 注意事项
 注意go.mod文件中替换包
 ```shell
-replace github.com/henrylee2cn/teleport v5.0.0+incompatible => github.com/wangxiao_xueyan_gomirrors/github.com_henrylee2cn_teleport v1.0.0
+replace github.com/henrylee2cn/teleport v5.0.0+incompatible => github.com/hhtlxhhxy/github.com_henrylee2cn_teleport v1.0.0
 
 或
 
-replace github.com/henrylee2cn/teleport v0.0.0 => github.com/wangxiao_xueyan_gomirrors/github.com_henrylee2cn_teleport v1.0.0
+replace github.com/henrylee2cn/teleport v0.0.0 => github.com/hhtlxhhxy/github.com_henrylee2cn_teleport v1.0.0
 ```
 
