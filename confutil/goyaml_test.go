@@ -14,7 +14,7 @@ import (
 	"strings"
 	"testing"
 
-	"git.100tal.com/wangxiao_go_lib/xesTools/flagutil"
+	"github.com/tal-tech/xtools/flagutil"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -25,7 +25,7 @@ type YamlStruct struct {
 
 func TestGoYaml(t *testing.T) {
 	flagutil.SetConfig("conf/conf.yaml")
-	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/git.100tal.com/wangxiao_go_lib/xesTools/confutil")
+	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/github.com/tal-tech/xtools/confutil")
 	assert.Equal(t, GetConf("goyaml", "name"), "goyaml")
 	assert.Equal(t, GetConfDefault("goyaml", "name", ""), "goyaml")
 	assert.Equal(t, GetConfDefault("goyaml", "default", ""), "")
@@ -57,7 +57,7 @@ type YamlObjectTest struct {
 }
 
 func TestGoYamlObject(t *testing.T) {
-	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/git.100tal.com/wangxiao_go_lib/xesTools/confutil")
+	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/github.com/tal-tech/xtools/confutil")
 	cfg, err := Load("conf/object.yaml")
 	if err != nil {
 		t.Errorf("GoYaml Load failed,err:%v", err)

@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"git.100tal.com/wangxiao_go_lib/xesTools/flagutil"
+	"github.com/tal-tech/xtools/flagutil"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -29,7 +29,7 @@ type IniStruct struct {
 
 func TestGoConfig(t *testing.T) {
 	flagutil.SetConfig("conf/conf.ini")
-	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/git.100tal.com/wangxiao_go_lib/xesTools/confutil")
+	SetConfPathPrefix(os.Getenv("GOPATH") + "/src/github.com/tal-tech/xtools/confutil")
 	assert.Equal(t, "goconfig", GetConf("goconfig", "name"))
 	assert.Equal(t, GetConfDefault("goconfig", "name", ""), "goconfig")
 	assert.Equal(t, GetConfDefault("goconfig", "default", ""), "")
